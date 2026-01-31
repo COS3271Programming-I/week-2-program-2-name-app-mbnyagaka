@@ -1,0 +1,32 @@
+package Week2programs;
+
+import java.util.Scanner;
+
+public class NameApp {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter first name: ");
+        String firstName = input.nextLine();
+
+        System.out.print("Enter last name: ");
+        String lastName = input.nextLine();
+
+        System.out.print("Enter age: ");
+        int age = input.nextInt();
+
+        System.out.print("Enter average sleep (hours per day): ");
+        double avgSleep = input.nextDouble();
+
+        double roundedSleep = Math.round(avgSleep * 10.0) / 10.0;
+
+        System.out.println("\n=== Person Info ===");
+
+        System.out.format("%-15s %s%n", "First Name:", firstName);
+        System.out.format("%-15s %s%n", "Last Name:", lastName);
+        System.out.format("%-15s %d%n", "Age:", age);
+        System.out.format("%-15s %.1f%n", "Avg Sleep:", roundedSleep);
+
+        input.close();
+    }
+}
